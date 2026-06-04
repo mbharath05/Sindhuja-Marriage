@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sindhuja &amp; Rex Thomas — A Regal Union</title>
+<title>Sindhuja &amp; Rex Thomas — A Majestic Marriage</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,500&family=Alex+Brush&display=swap" rel="stylesheet">
 <style>
@@ -126,7 +126,12 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
 
 /* Minimized name font sizing specifically for Slide 3 */
 .royal-name { font-family: 'Alex Brush', cursive; font-size: clamp(3.6rem, 10vw, 5.8rem); line-height: 0.95; display: block; }
-.royal-name.bride { color: var(--charcoal-royal); text-shadow: 1px 2px 3px rgba(255,255,255,0.7); }
+/* Luxury wine/velvet gradient for the Bride */
+.royal-name.bride { 
+  background: linear-gradient(135deg, #b03a53 0%, var(--velvet-wine) 50%, #611625 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  filter: drop-shadow(1px 1px 1px rgba(255,255,255,0.8));
+}
 .royal-name.groom { color: var(--gold-deep); text-shadow: 1px 1px 2px rgba(255,255,255,0.7); }
 .alias { font-family: 'Cinzel', serif; font-size: 0.8rem; color: var(--velvet-wine); font-weight: 700; letter-spacing: 0.3em; margin: 4px 0 8px 0; display: block; text-transform: uppercase; }
 .interlace-divider { font-family: 'Cinzel Decorative', serif; font-size: 1.0rem; letter-spacing: 0.5em; margin: 10px 0; color: var(--gold-mid); display: block; }
@@ -177,6 +182,12 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
 .countdown-val { font-family: 'Cinzel', serif; font-size: 1.45rem; font-weight: 700; color: var(--gold-deep); display: block; }
 .countdown-lbl { font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--subtle-slate); font-weight: 800; }
 
+/* Finale Specific Bride Color Styling */
+.finale-bride {
+  color: var(--velvet-wine);
+  text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+}
+
 .replay-action-btn {
   background: rgba(255,255,255,0.8); border: 1px solid var(--gold-mid); padding: 10px 28px;
   font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
@@ -213,6 +224,7 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
 <div class="video-model-bg"></div>
 <div class="ambient-overlay"></div>
 
+<!-- Custom Star Glint Canvas Particles -->
 <canvas id="particleCanvas"></canvas>
 
 <div id="progress-timeline"></div>
@@ -226,8 +238,12 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
   <div class="controller-dot" onclick="manualJump(5)"></div>
 </div>
 
+<!-- ══════════════════════════════════════
+     AUTOMATIC CINEMATIC STAGE STACK
+══════════════════════════════════════ -->
 <div id="scenes">
 
+  <!-- SCENE 0: Holy Prologue -->
   <div class="scene active" id="s0">
     <div class="cross-container">
       <svg width="65" height="90" viewBox="0 0 90 110" fill="none">
@@ -248,6 +264,7 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
     <div class="main-invitation-label gold-text-gradient">Wedding Invitation</div>
   </div>
 
+  <!-- SCENE 1: Announcement -->
   <div class="scene" id="s1">
     <div class="family-intro">Together With Their Families</div>
     <div class="parent-names gold-text-gradient">Mr. J. Rajan &amp; Mrs. R. Jayamalini</div>
@@ -259,6 +276,7 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
     </div>
   </div>
 
+  <!-- SCENE 2: The Royal Spouses -->
   <div class="scene" id="s2">
     <div style="width: 100%;">
       <span class="royal-name bride">R. Sindhuja</span>
@@ -270,6 +288,7 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
     </div>
   </div>
 
+  <!-- SCENE 3: Sacred Schedule -->
   <div class="scene" id="s3">
     <div class="section-headline gold-text-gradient">The Celebration</div>
     <div class="modern-grid">
@@ -292,6 +311,7 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
     </div>
   </div>
 
+  <!-- SCENE 4: Destination Venues -->
   <div class="scene" id="s4">
     <div class="section-headline gold-text-gradient">Celebration Venues</div>
     
@@ -320,12 +340,13 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
     </div>
   </div>
 
+  <!-- SCENE 5: Grand Finale & Countdown -->
   <div class="scene" id="s5">
     <div class="final-date-badge gold-text-gradient">24th June 2026</div>
     <div class="final-clock-text">Wednesday • 4:00 PM onwards</div>
     
     <div style="font-family:'Alex Brush', cursive; font-size: 3.4rem; line-height:1.2; margin-bottom:12px;">
-      <span style="color:var(--charcoal-royal)">Sindhuja</span> <span style="color:var(--gold-mid); font-size:1.8rem">&amp;</span> <span style="color:var(--gold-deep)">Rex Thomas</span>
+      <span class="finale-bride">Sindhuja</span> <span style="color:var(--gold-mid); font-size:1.8rem">&amp;</span> <span style="color:var(--gold-deep)">Rex Thomas</span>
     </div>
 
     <div class="master-countdown" id="live-timer">
