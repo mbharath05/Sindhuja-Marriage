@@ -85,11 +85,7 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
 }
 
 @media(max-width: 480px) {
-  .scene {
-    padding: 30px 18px;
-    width: 92%;
-    min-height: 410px;
-  }
+  .scene { padding: 30px 18px; width: 92%; min-height: 410px; }
   .scene::before { inset: 8px; }
   .scene::after { inset: 4px; }
 }
@@ -130,12 +126,11 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
   text-transform: uppercase;
 }
 
-/* Updated style for family intro */
 .family-intro-gradient {
   font-family: 'Cinzel', serif; 
   font-size: 0.75rem; 
   letter-spacing: 0.55em; 
-  text-transform: uppercase; 
+  text-transform: uppercase;
   font-weight: 800; 
   margin-bottom: 18px;
   background: linear-gradient(90deg, var(--velvet-wine), var(--gold-deep));
@@ -143,13 +138,15 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
   -webkit-text-fill-color: transparent;
 }
 
-.parent-names { font-family: 'Cinzel Decorative', serif; font-size: clamp(1.15rem, 3vw, 1.55rem); font-weight: 700; color: var(--charcoal-royal); margin-bottom: 22px; letter-spacing: 0.04em; }
-.invite-prose { font-size: clamp(1.1rem, 2vw, 1.3rem); font-style: italic; line-height: 2.2; color: var(--subtle-slate); font-weight: 600; }
+.parent-names { font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(1.15rem, 3vw, 1.55rem); font-weight: 700; color: var(--charcoal-royal); margin-bottom: 22px; letter-spacing: 0.04em; }
+.invite-prose { font-size: clamp(1.1rem, 2vw, 1.3rem); font-style: italic;
+  line-height: 2.2; color: var(--subtle-slate); font-weight: 600; }
 
 .royal-name { 
   font-family: 'Alex Brush', cursive; 
   font-size: clamp(2.8rem, 8.5vw, 4.8rem); 
-  line-height: 1.1; 
+  line-height: 1.1;
   display: block; 
   white-space: nowrap;
 }
@@ -162,8 +159,10 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
 .alias { font-family: 'Cinzel', serif;
   font-size: 0.8rem; color: var(--velvet-wine); font-weight: 700; letter-spacing: 0.3em; margin: 4px 0 8px 0; display: block; text-transform: uppercase;
 }
-.interlace-divider { font-family: 'Cinzel Decorative', serif; font-size: 1.0rem; letter-spacing: 0.5em; margin: 10px 0; color: var(--gold-mid); display: block; }
-.line-accent { width: 100px; height: 1px; background: linear-gradient(to right, transparent, var(--gold-mid), transparent); margin: 22px auto 0; }
+.interlace-divider { font-family: 'Cinzel Decorative', serif; font-size: 1.0rem; letter-spacing: 0.5em; margin: 10px 0; color: var(--gold-mid); display: block;
+}
+.line-accent { width: 100px; height: 1px; background: linear-gradient(to right, transparent, var(--gold-mid), transparent); margin: 22px auto 0;
+}
 
 .section-headline { font-family: 'Cinzel Decorative', serif; font-size: 1.35rem; letter-spacing: 0.25em; margin-bottom: 25px; text-transform: uppercase; }
 .modern-grid { display: grid;
@@ -175,8 +174,10 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
   border-radius: 2px; padding: 20px 15px;
   box-shadow: 0 4px 15px rgba(120,91,26,0.04);
 }
-.card-icon { font-size: 1.6rem; margin-bottom: 6px; display: block; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08)); }
-.card-meta { font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.4em; color: var(--gold-deep); font-weight: 800; text-transform: uppercase; margin-bottom: 5px; }
+.card-icon { font-size: 1.6rem; margin-bottom: 6px; display: block; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08));
+}
+.card-meta { font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.4em; color: var(--gold-deep); font-weight: 800; text-transform: uppercase; margin-bottom: 5px;
+}
 .card-main-text { font-family: 'Cinzel', serif; font-size: 1.15rem; font-weight: 700; line-height: 1.4; color: var(--charcoal-royal); letter-spacing: 0.05em; }
 .card-sub-text { font-size: 0.85rem;
   font-style: italic; color: var(--subtle-slate); font-weight: 600; margin-top: 2px; }
@@ -189,7 +190,8 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
 }
 .solemnized-banner .label { font-family: 'Cinzel', serif; font-size: 0.55rem; letter-spacing: 0.45em; color: var(--gold-deep);
   font-weight: 800; margin-bottom: 3px; text-transform: uppercase; }
-.solemnized-banner .name { font-family: 'Cinzel', serif; font-size: 1.05rem; font-weight: 700; color: var(--charcoal-royal); letter-spacing: 0.05em; }
+.solemnized-banner .name { font-family: 'Cinzel', serif; font-size: 1.05rem; font-weight: 700; color: var(--charcoal-royal); letter-spacing: 0.05em;
+}
 
 .venue-row-card {
   width: 100%; text-align: left; padding: 18px 20px; border-radius: 2px; z-index: 5;
@@ -200,12 +202,16 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
 .venue-row-card.reception-card { border-left-color: var(--velvet-wine); }
 .venue-flex-header { display: flex;
   align-items: center; gap: 12px; margin-bottom: 6px; }
-.venue-title-text { font-family: 'Cinzel', serif; font-size: 1.15rem; color: var(--charcoal-royal); font-weight: 700; letter-spacing: 0.02em; }
+.venue-title-text { font-family: 'Cinzel', serif; font-size: 1.15rem; color: var(--charcoal-royal); font-weight: 700; letter-spacing: 0.02em;
+}
 .venue-row-card.reception-card .venue-title-text { color: var(--velvet-wine); }
-.venue-address { font-size: 0.88rem; font-style: italic; line-height: 1.6; color: var(--subtle-slate); font-weight: 600; padding-left: 28px; }
+.venue-address { font-size: 0.88rem; font-style: italic; line-height: 1.6; color: var(--subtle-slate); font-weight: 600; padding-left: 28px;
+}
 
-.final-date-badge { font-family: 'Cinzel Decorative', serif; font-size: clamp(1.6rem, 4.5vw, 2.3rem); letter-spacing: 0.15em; font-weight: 900; margin-bottom: 4px; }
-.final-clock-text { font-family: 'Cinzel', serif; font-size: 1rem; letter-spacing: 0.2em; color: var(--gold-deep); font-weight: 700; margin-bottom: 18px; text-transform: uppercase; }
+.final-date-badge { font-family: 'Cinzel Decorative', serif; font-size: clamp(1.6rem, 4.5vw, 2.3rem); letter-spacing: 0.15em; font-weight: 900; margin-bottom: 4px;
+}
+.final-clock-text { font-family: 'Cinzel', serif; font-size: 1rem; letter-spacing: 0.2em; color: var(--gold-deep); font-weight: 700; margin-bottom: 18px; text-transform: uppercase;
+}
 .master-countdown { display: flex; gap: 10px; margin: 15px 0; justify-content: center; width: 100%; z-index: 5; }
 .countdown-unit {
   min-width: 62px;
@@ -261,7 +267,8 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
   transform-origin: center;
 }
 
-.bird-left { animation: loveAndKissLeft 6s infinite ease-in-out; }
+.bird-left { animation: loveAndKissLeft 6s infinite ease-in-out;
+}
 .bird-right { animation: loveAndKissRight 6s infinite ease-in-out; }
 
 .love-heart {
@@ -282,28 +289,36 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
 }
 
 @keyframes loveAndKissLeft {
-  0%, 100% { transform: translateX(-55px) translateY(0px) rotate(0deg); }
+  0%, 100% { transform: translateX(-55px) translateY(0px) rotate(0deg);
+}
   20% { transform: translateX(-55px) translateY(-4px) rotate(-2deg); }
-  42% { transform: translateX(-18px) translateY(-2px) rotate(10deg); }
+  42% { transform: translateX(-18px) translateY(-2px) rotate(10deg);
+}
   50% { transform: translateX(-16px) translateY(-2px) rotate(12deg); }
-  58% { transform: translateX(-18px) translateY(-2px) rotate(10deg); }
+  58% { transform: translateX(-18px) translateY(-2px) rotate(10deg);
+}
   80% { transform: translateX(-55px) translateY(-3px) rotate(2deg); }
 }
 
 @keyframes loveAndKissRight {
-  0%, 100% { transform: scaleX(-1) translateX(-55px) translateY(0px) rotate(0deg); }
+  0%, 100% { transform: scaleX(-1) translateX(-55px) translateY(0px) rotate(0deg);
+}
   20% { transform: scaleX(-1) translateX(-55px) translateY(-4px) rotate(-2deg); }
-  42% { transform: scaleX(-1) translateX(-18px) translateY(-2px) rotate(10deg); }
+  42% { transform: scaleX(-1) translateX(-18px) translateY(-2px) rotate(10deg);
+}
   50% { transform: scaleX(-1) translateX(-16px) translateY(-2px) rotate(12deg); }
-  58% { transform: scaleX(-1) translateX(-18px) translateY(-2px) rotate(10deg); }
+  58% { transform: scaleX(-1) translateX(-18px) translateY(-2px) rotate(10deg);
+}
   80% { transform: scaleX(-1) translateX(-55px) translateY(-3px) rotate(2deg); }
 }
 
-.bird-wing { transform-origin: 25px 28px; animation: continuousWingFlap 0.16s infinite alternate linear; }
+.bird-wing { transform-origin: 25px 28px; animation: continuousWingFlap 0.16s infinite alternate linear;
+}
 
 @keyframes continuousWingFlap {
   0% { transform: scaleY(0.4) rotate(-12deg); }
-  100% { transform: scaleY(1.1) rotate(16deg); }
+  100% { transform: scaleY(1.1) rotate(16deg);
+}
 }
 
 #progress-timeline {
@@ -388,11 +403,12 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
     <div class="section-headline gold-text-gradient">The Celebration</div>
     <div class="modern-grid">
       <div class="premium-card">
-        <span class="card-icon">📅</span>
+        <span class="card-icon">😍</span>
         <div class="card-meta">Selected Date</div>
         <div class="card-main-text">Wednesday<br>24th June 2026</div>
         <div class="card-sub-text">Save the Date</div>
       </div>
+    
       <div class="premium-card">
         <span class="card-icon">👑</span>
         <div class="card-meta">The Timings</div>
@@ -460,8 +476,16 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
       </div>
       <div class="love-heart">❤️</div>
     </div>
+    
     <div class="final-date-badge gold-text-gradient">24th June 2026</div>
-    <div class="final-clock-text">Wednesday • 4:00 PM onwards</div>
+    <div class="final-clock-text">Wednesday • 6:00 PM onwards</div>
+    
+    <div style="margin: 10px 0;">
+        <a href="https://maps.app.goo.gl/ibLXUgo3kUrYyrgq5" target="_blank" style="text-decoration: none; font-family: 'Cinzel', serif; color: var(--velvet-wine); font-weight: 800; border: 1px solid var(--velvet-wine); padding: 8px 15px; border-radius: 4px; display: inline-block;">
+            📍 Join Us at the Reception
+        </a>
+    </div>
+
     <div style="font-family:'Alex Brush', cursive; font-size: clamp(1.75rem, 7.2vw, 3.4rem); line-height:1.2; margin-bottom:12px; white-space: nowrap; width: 100%; text-align: center;">
       <span class="finale-bride">Sindhuja</span> <span style="color:var(--gold-mid); font-size:1.8rem">&amp;</span> <span style="color:var(--gold-deep)">Rex Thomas</span>
     </div>
@@ -519,7 +543,6 @@ function restartVideoModel(event) { if (event) event.stopPropagation(); playSequ
 
 let isScrolling = false;
 let touchStartY = 0;
-
 function handleScroll(direction) {
     if (isScrolling) return;
     isScrolling = true;
@@ -580,7 +603,7 @@ function tickParticles() {
 }
 requestAnimationFrame(tickParticles);
 
-const TARGET_CLOCK = new Date("June 24, 2026 16:00:00").getTime();
+const TARGET_CLOCK = new Date("June 24, 2026 18:00:00").getTime();
 function computeCountdown() {
   const presentTime = new Date().getTime();
   const timeDifference = TARGET_CLOCK - presentTime;
