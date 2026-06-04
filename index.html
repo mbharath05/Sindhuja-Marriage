@@ -14,7 +14,6 @@
   --velvet-wine: #963246;
   --charcoal-royal: #1c2421;
   --subtle-slate: #3a4742;
-  /* Crystal clear luxury ivory glass for peak legibility */
   --glass-premium: rgba(255, 255, 254, 0.72);
   --border-gold-leaf: rgba(179, 143, 67, 0.45);
 }
@@ -30,13 +29,9 @@ html, body {
   background: #fdfaf4;
 }
 
-/* ═══════════════════════════════
-   CINEMATIC BACKDROP
-═══════════════════════════════ */
 .video-model-bg {
   position: fixed;
   inset: 0;
-  /* Magnificent, high-fashion editorial wedding couple background */
   background: url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1920&auto=format&fit=crop') center center / cover no-repeat;
   z-index: 0;
   transform: scale(1.01);
@@ -59,9 +54,6 @@ html, body {
 canvas { position: fixed; inset: 0; pointer-events: none; }
 #particleCanvas { z-index: 2; }
 
-/* ═══════════════════════════════
-   HIGH-FASHION EDITORIAL SCENES
-═══════════════════════════════ */
 #scenes { position: fixed; inset: 0; z-index: 3; display: flex; align-items: center; justify-content: center; }
 
 .scene {
@@ -81,7 +73,6 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
   opacity: 1; pointer-events: auto; transform: scale(1) translateY(0);
 }
 
-/* Double Layer Luxury Floating Border */
 .scene::before {
   content: ''; position: absolute; inset: 12px;
   border: 1px dashed var(--gold-mid); pointer-events: none; opacity: 0.45;
@@ -91,13 +82,18 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
   border: 1px solid var(--gold-royal); pointer-events: none; opacity: 0.25;
 }
 
-/* ═══════════════════════════════
-   PREMIUM TYPOGRAPHY ARCHITECTURE
-═══════════════════════════════ */
 .gold-text-gradient {
   background: linear-gradient(135deg, var(--gold-deep) 0%, var(--gold-mid) 40%, var(--gold-royal) 70%, var(--gold-deep) 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 1px 1px rgba(255,255,255,0.8));
+}
+
+/* Decent classic Roman Serif J styling */
+.majestic-j {
+  font-family: 'Cinzel', serif;
+  font-weight: 800;
+  color: inherit;
+  display: inline;
 }
 
 .cross-container {
@@ -124,9 +120,13 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
 .parent-names { font-family: 'Cinzel Decorative', serif; font-size: clamp(1.15rem, 3vw, 1.55rem); font-weight: 700; color: var(--charcoal-royal); margin-bottom: 22px; letter-spacing: 0.04em; }
 .invite-prose { font-size: clamp(1.1rem, 2vw, 1.3rem); font-style: italic; line-height: 2.2; color: var(--subtle-slate); font-weight: 600; }
 
-/* Minimized name font sizing specifically for Slide 3 */
-.royal-name { font-family: 'Alex Brush', cursive; font-size: clamp(3.6rem, 10vw, 5.8rem); line-height: 0.95; display: block; }
-/* Luxury wine/velvet gradient for the Bride */
+.royal-name { 
+  font-family: 'Alex Brush', cursive; 
+  font-size: clamp(2.8rem, 8.5vw, 4.8rem); 
+  line-height: 1.1; 
+  display: block; 
+  white-space: nowrap; 
+}
 .royal-name.bride { 
   background: linear-gradient(135deg, #b03a53 0%, var(--velvet-wine) 50%, #611625 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
@@ -141,7 +141,6 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
 .modern-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; width: 100%; margin-bottom: 15px; z-index: 5; }
 @media(max-width: 560px) { .modern-grid { grid-template-columns: 1fr; gap: 12px; } }
 
-/* Premium Grid Cards Styling */
 .premium-card {
   background: rgba(255, 255, 255, 0.6); border: 1px solid var(--border-gold-leaf);
   border-radius: 2px; padding: 20px 15px; box-shadow: 0 4px 15px rgba(120,91,26,0.04);
@@ -159,10 +158,9 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
 .solemnized-banner .label { font-family: 'Cinzel', serif; font-size: 0.55rem; letter-spacing: 0.45em; color: var(--gold-deep); font-weight: 800; margin-bottom: 3px; text-transform: uppercase; }
 .solemnized-banner .name { font-family: 'Cinzel', serif; font-size: 1.05rem; font-weight: 700; color: var(--charcoal-royal); letter-spacing: 0.05em; }
 
-/* Elegant Row Venue Cards Styling */
 .venue-row-card {
   width: 100%; text-align: left; padding: 18px 20px; border-radius: 2px; z-index: 5;
-  background: rgba(255, 255, 255, 0.55); border-left: 3px solid var(--gold-mid); margin-bottom: 12px;
+  background: rgba(255, 255, 254, 0.55); border-left: 3px solid var(--gold-mid); margin-bottom: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.02);
 }
 .venue-row-card.reception-card { border-left-color: var(--velvet-wine); }
@@ -171,7 +169,6 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
 .venue-row-card.reception-card .venue-title-text { color: var(--velvet-wine); }
 .venue-address { font-size: 0.88rem; font-style: italic; line-height: 1.6; color: var(--subtle-slate); font-weight: 600; padding-left: 28px; }
 
-/* Finale Design Details */
 .final-date-badge { font-family: 'Cinzel Decorative', serif; font-size: clamp(1.6rem, 4.5vw, 2.3rem); letter-spacing: 0.15em; font-weight: 900; margin-bottom: 4px; }
 .final-clock-text { font-family: 'Cinzel', serif; font-size: 1rem; letter-spacing: 0.2em; color: var(--gold-deep); font-weight: 700; margin-bottom: 18px; text-transform: uppercase; }
 .master-countdown { display: flex; gap: 10px; margin: 15px 0; justify-content: center; width: 100%; z-index: 5; }
@@ -182,7 +179,6 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
 .countdown-val { font-family: 'Cinzel', serif; font-size: 1.45rem; font-weight: 700; color: var(--gold-deep); display: block; }
 .countdown-lbl { font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--subtle-slate); font-weight: 800; }
 
-/* Finale Specific Bride Color Styling */
 .finale-bride {
   color: var(--velvet-wine);
   text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
@@ -191,10 +187,131 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
 .replay-action-btn {
   background: rgba(255,255,255,0.8); border: 1px solid var(--gold-mid); padding: 10px 28px;
   font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
-  color: var(--gold-deep); font-weight: 800; border-radius: 2px; cursor: pointer; transition: all 0.35s ease; margin-top: 18px; z-index: 5;
+  color: var(--gold-deep); font-weight: 800; border-radius: 4px; cursor: pointer; transition: all 0.35s ease; margin-top: 18px; z-index: 5;
 }
 .replay-action-btn:hover {
   background: var(--gold-deep); color: #fff; box-shadow: 0 5px 15px rgba(120,91,26,0.35);
+}
+
+/* ═══════════════════════════════
+   LOVE BIRDS CIRCLING ANIMATION (SLIDE 6)
+═══════════════════════════════ */
+.love-birds-container {
+  position: relative;
+  width: 220px;
+  height: 120px;
+  margin-top: -10px;
+  margin-bottom: 5px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.love-birds-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.love-branch {
+  stroke: var(--gold-mid);
+  stroke-width: 3;
+  stroke-linecap: round;
+  opacity: 0.8;
+}
+.bird {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  transform-origin: center;
+}
+
+/* Symmetrical Hover & Kiss flight sequence */
+.bird-left {
+  animation: loveAndKissLeft 6s infinite ease-in-out;
+}
+.bird-right {
+  animation: loveAndKissRight 6s infinite ease-in-out;
+}
+
+.love-heart {
+  position: absolute;
+  font-size: 1.3rem;
+  animation: heartPulseSync 6s infinite ease-in-out;
+  z-index: 6;
+}
+
+/* Pulsates wildly in sync with kissing touch */
+@keyframes heartPulseSync {
+  0%, 30%, 70%, 100% {
+    transform: scale(1);
+    text-shadow: 0 0 5px rgba(239, 68, 68, 0.2);
+  }
+  43% {
+    transform: scale(1.4);
+    text-shadow: 0 0 15px rgba(239, 68, 68, 0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  57% {
+    transform: scale(1.55);
+    text-shadow: 0 0 20px rgba(239, 68, 68, 0.9);
+  }
+}
+
+/* Symmetrical flight coordinates so birds fly & kiss lovingly */
+@keyframes loveAndKissLeft {
+  0%, 100% {
+    transform: translateX(-55px) translateY(0px) rotate(0deg);
+  }
+  20% {
+    transform: translateX(-55px) translateY(-4px) rotate(-2deg);
+  }
+  42% {
+    transform: translateX(-18px) translateY(-2px) rotate(10deg);
+  }
+  50% {
+    transform: translateX(-16px) translateY(-2px) rotate(12deg);
+  }
+  58% {
+    transform: translateX(-18px) translateY(-2px) rotate(10deg);
+  }
+  80% {
+    transform: translateX(-55px) translateY(-3px) rotate(2deg);
+  }
+}
+
+@keyframes loveAndKissRight {
+  0%, 100% {
+    transform: scaleX(-1) translateX(-55px) translateY(0px) rotate(0deg);
+  }
+  20% {
+    transform: scaleX(-1) translateX(-55px) translateY(-4px) rotate(-2deg);
+  }
+  42% {
+    transform: scaleX(-1) translateX(-18px) translateY(-2px) rotate(10deg);
+  }
+  50% {
+    transform: scaleX(-1) translateX(-16px) translateY(-2px) rotate(12deg);
+  }
+  58% {
+    transform: scaleX(-1) translateX(-18px) translateY(-2px) rotate(10deg);
+  }
+  80% {
+    transform: scaleX(-1) translateX(-55px) translateY(-3px) rotate(2deg);
+  }
+}
+
+/* High fidelity wing flapping */
+.bird-wing {
+  transform-origin: 25px 28px;
+  animation: continuousWingFlap 0.16s infinite alternate linear;
+}
+
+@keyframes continuousWingFlap {
+  0% { transform: scaleY(0.4) rotate(-12deg); }
+  100% { transform: scaleY(1.1) rotate(16deg); }
 }
 
 /* ═══════════════════════════════
@@ -264,10 +381,11 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
     <div class="main-invitation-label gold-text-gradient">Wedding Invitation</div>
   </div>
 
-  <!-- SCENE 1: Announcement -->
+  <!-- SCENE 1: Announcement (Slide 2) -->
   <div class="scene" id="s1">
     <div class="family-intro">Together With Their Families</div>
-    <div class="parent-names gold-text-gradient">Mr. J. Rajan &amp; Mrs. R. Jayamalini</div>
+    <!-- Decent classic Serif 'J' -->
+    <div class="parent-names gold-text-gradient">Mr. <span class="majestic-j">J</span>. Rajan &amp; Mrs. R. <span class="majestic-j">J</span>ayamalini</div>
     <div class="invite-prose">
       Cordially invite you to grace the solemn <br>
       <span style="color: var(--gold-deep); font-weight:800; font-family:'Cinzel', serif; font-size:0.95rem; letter-spacing:1px;">Nuptial Mass</span> and the majestic <br>
@@ -276,11 +394,12 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
     </div>
   </div>
 
-  <!-- SCENE 2: The Royal Spouses -->
+  <!-- SCENE 2: The Royal Spouses (Slide 3) -->
   <div class="scene" id="s2">
-    <div style="width: 100%;">
+    <div style="width: 100%; max-width: 100%; overflow: hidden;">
       <span class="royal-name bride">R. Sindhuja</span>
-      <span class="alias">jenifer</span>
+      <span class="alias">( Jenifer )</span>
+      <span style="display:block; margin-top:5px; font-style:italic; color: var(--subtle-slate); font-weight: 600; font-size:0.92rem; letter-spacing: 0.02em;">(D/o. Mr. <span class="majestic-j">J</span>. Rajan &amp; Mrs. R. <span class="majestic-j">J</span>ayamalini)</span>
       <span class="interlace-divider">💍 weds 💍</span>
       <span class="royal-name groom">X. Rex Thomas</span>
       <span style="display:block; margin-top:15px; font-style:italic; color: var(--subtle-slate); font-weight: 600; font-size:0.95rem;">S/o. Mr. F. Xavier &amp; Mrs. X. Flora</span>
@@ -288,7 +407,7 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
     </div>
   </div>
 
-  <!-- SCENE 3: Sacred Schedule -->
+  <!-- SCENE 3: Sacred Schedule (Slide 4) -->
   <div class="scene" id="s3">
     <div class="section-headline gold-text-gradient">The Celebration</div>
     <div class="modern-grid">
@@ -311,7 +430,7 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
     </div>
   </div>
 
-  <!-- SCENE 4: Destination Venues -->
+  <!-- SCENE 4: Destination Venues (Slide 5) -->
   <div class="scene" id="s4">
     <div class="section-headline gold-text-gradient">Celebration Venues</div>
     
@@ -340,12 +459,49 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
     </div>
   </div>
 
-  <!-- SCENE 5: Grand Finale & Countdown -->
+  <!-- SCENE 5: Grand Finale & Countdown (Slide 6) -->
   <div class="scene" id="s5">
+    
+    <!-- Poetic Vector Love Birds Display -->
+    <div class="love-birds-container">
+      <svg class="love-birds-svg" viewBox="0 0 200 80">
+        <!-- Elegant golden branch base -->
+        <path class="love-branch" d="M20,66 Q100,56 180,66" fill="none" />
+        <path d="M140,61 Q155,51 160,61" fill="none" stroke="#785b1a" stroke-width="1.5" />
+      </svg>
+      
+      <!-- Bride Bird (Velvet Burgundy) loving interaction -->
+      <div class="bird bird-left" style="color: var(--velvet-wine);">
+        <svg viewBox="0 0 50 50" width="35" height="35">
+          <path d="M15,35 L5,38 L8,32 Z" fill="currentColor" />
+          <path d="M15,35 C15,20 30,15 38,22 C45,28 42,38 30,38 C22,38 15,35 15,35 Z" fill="currentColor" />
+          <circle cx="34" cy="18" r="7" fill="currentColor" />
+          <polygon points="40,16 46,19 40,21" fill="#dfba6b" />
+          <path class="bird-wing" d="M22,30 C20,25 28,22 32,28 C34,32 28,35 22,30 Z" fill="rgba(255,255,255,0.6)" />
+          <circle cx="33" cy="17" r="1.2" fill="#fff" />
+        </svg>
+      </div>
+      
+      <!-- Groom Bird (Deep Gold) loving interaction -->
+      <div class="bird bird-right" style="color: var(--gold-deep);">
+        <svg viewBox="0 0 50 50" width="35" height="35">
+          <path d="M15,35 L5,38 L8,32 Z" fill="currentColor" />
+          <path d="M15,35 C15,20 30,15 38,22 C45,28 42,38 30,38 C22,38 15,35 15,35 Z" fill="currentColor" />
+          <circle cx="34" cy="18" r="7" fill="currentColor" />
+          <polygon points="40,16 46,19 40,21" fill="#dfba6b" />
+          <path class="bird-wing" d="M22,30 C20,25 28,22 32,28 C34,32 28,35 22,30 Z" fill="rgba(255,255,255,0.6)" />
+          <circle cx="33" cy="17" r="1.2" fill="#fff" />
+        </svg>
+      </div>
+      
+      <!-- Pulsating central target love heart -->
+      <div class="love-heart">❤️</div>
+    </div>
+
     <div class="final-date-badge gold-text-gradient">24th June 2026</div>
     <div class="final-clock-text">Wednesday • 4:00 PM onwards</div>
     
-    <div style="font-family:'Alex Brush', cursive; font-size: 3.4rem; line-height:1.2; margin-bottom:12px;">
+    <div style="font-family:'Alex Brush', cursive; font-size: 3.4rem; line-height:1.2; margin-bottom:12px; white-space: nowrap;">
       <span class="finale-bride">Sindhuja</span> <span style="color:var(--gold-mid); font-size:1.8rem">&amp;</span> <span style="color:var(--gold-deep)">Rex Thomas</span>
     </div>
 
@@ -365,9 +521,6 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
 </div>
 
 <script>
-// ═══════════════════════════════════════════════════════
-//  AUTOMATIC VIDEO MODEL TIMELINE ENGINE
-// ═══════════════════════════════════════════════════════
 const SCENE_NODES = document.querySelectorAll('.scene');
 const DOTS = document.querySelectorAll('.controller-dot');
 const TIMELINE_BAR = document.getElementById('progress-timeline');
@@ -425,9 +578,6 @@ window.onload = () => {
   requestAnimationFrame(updateTimelineVisuals);
 };
 
-// ═══════════════════════════════════════════════════════
-//  PREMIUM SPARKLING STAR PARTICLES ENGINE
-// ═══════════════════════════════════════════════════════
 const pC = document.getElementById('particleCanvas'), pCtx = pC.getContext('2d');
 function resizeCanvas() { pC.width = window.innerWidth; pC.height = window.innerHeight; }
 resizeCanvas();
@@ -468,9 +618,6 @@ function tickParticles() {
 }
 requestAnimationFrame(tickParticles);
 
-// ═══════════════════════════════════════════════════════
-//  HIGH-PRECISION COUNTDOWN ENGINE
-// ═══════════════════════════════════════════════════════
 const TARGET_CLOCK = new Date("June 24, 2026 16:00:00").getTime();
 
 function computeCountdown() {
