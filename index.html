@@ -452,7 +452,6 @@ let currentIdx = 0;
 let sceneStartTime = Date.now();
 const DISPLAY_DURATION = 5000;
 let engineTimer = null;
-let isScrolling = false;
 
 function updateTimelineVisuals() {
   const elapsed = Date.now() - sceneStartTime;
@@ -484,18 +483,34 @@ function playSequence(targetIdx) {
 function manualJump(targetIdx) { playSequence(targetIdx); }
 function restartVideoModel(event) { if (event) event.stopPropagation(); playSequence(0); }
 
-// Added Scroll Navigation
+// --- Universal Scrolling Logic ---
+let isScrolling = false;
+let touchStartY = 0;
+
+function handleScroll(direction) {
+    if (isScrolling) return;
+    isScrolling = true;
+    if (direction === 'next') {
+        playSequence((currentIdx + 1) % SCENE_NODES.length);
+    } else {
+        playSequence((currentIdx - 1 + SCENE_NODES.length) % SCENE_NODES.length);
+    }
+    setTimeout(() => { isScrolling = false; }, 800);
+}
+
 window.addEventListener('wheel', (e) => {
-  if (isScrolling) return;
-  isScrolling = true;
-  if (e.deltaY > 0) {
-    let next = (currentIdx + 1) % SCENE_NODES.length;
-    playSequence(next);
-  } else if (e.deltaY < 0) {
-    let prev = (currentIdx - 1 + SCENE_NODES.length) % SCENE_NODES.length;
-    playSequence(prev);
-  }
-  setTimeout(() => { isScrolling = false; }, 800);
+    handleScroll(e.deltaY > 0 ? 'next' : 'prev');
+}, { passive: false });
+
+window.addEventListener('touchstart', (e) => {
+    touchStartY = e.touches[0].clientY;
+}, { passive: true });
+
+window.addEventListener('touchend', (e) => {
+    let deltaY = touchStartY - e.changedTouches[0].clientY;
+    if (Math.abs(deltaY) > 50) {
+        handleScroll(deltaY > 0 ? 'next' : 'prev');
+    }
 }, { passive: false });
 
 window.onload = () => {
