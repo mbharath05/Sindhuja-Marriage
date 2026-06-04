@@ -14,7 +14,6 @@
   --velvet-wine: #963246;
   --charcoal-royal: #1c2421;
   --subtle-slate: #3a4742;
-  /* Crystal clear luxury ivory glass for peak legibility */
   --glass-premium: rgba(255, 255, 254, 0.72);
   --border-gold-leaf: rgba(179, 143, 67, 0.45);
 }
@@ -30,13 +29,9 @@ html, body {
   background: #fdfaf4;
 }
 
-/* ═══════════════════════════════
-   CINEMATIC BACKDROP
-═══════════════════════════════ */
 .video-model-bg {
   position: fixed;
   inset: 0;
-  /* Magnificent, high-fashion editorial wedding couple background */
   background: url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1920&auto=format&fit=crop') center center / cover no-repeat;
   z-index: 0;
   transform: scale(1.01);
@@ -59,9 +54,6 @@ html, body {
 canvas { position: fixed; inset: 0; pointer-events: none; }
 #particleCanvas { z-index: 2; }
 
-/* ═══════════════════════════════
-   HIGH-FASHION EDITORIAL SCENES
-═══════════════════════════════ */
 #scenes { position: fixed; inset: 0; z-index: 3; display: flex; align-items: center; justify-content: center; }
 
 .scene {
@@ -81,7 +73,6 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
   opacity: 1; pointer-events: auto; transform: scale(1) translateY(0);
 }
 
-/* Double Layer Luxury Floating Border */
 .scene::before {
   content: ''; position: absolute; inset: 12px;
   border: 1px dashed var(--gold-mid); pointer-events: none; opacity: 0.45;
@@ -91,7 +82,6 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
   border: 1px solid var(--gold-royal); pointer-events: none; opacity: 0.25;
 }
 
-/* Responsive adjustment for extra compact mobile screens to prevent layout overflow */
 @media(max-width: 480px) {
   .scene {
     padding: 30px 18px;
@@ -102,9 +92,6 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
   .scene::after { inset: 4px; }
 }
 
-/* ═══════════════════════════════
-   PREMIUM TYPOGRAPHY ARCHITECTURE
-═══════════════════════════════ */
 .gold-text-gradient {
   background: linear-gradient(135deg, var(--gold-deep) 0%, var(--gold-mid) 40%, var(--gold-royal) 70%, var(--gold-deep) 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
@@ -142,7 +129,6 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
 .parent-names { font-family: 'Cinzel Decorative', serif; font-size: clamp(1.15rem, 3vw, 1.55rem); font-weight: 700; color: var(--charcoal-royal); margin-bottom: 22px; letter-spacing: 0.04em; }
 .invite-prose { font-size: clamp(1.1rem, 2vw, 1.3rem); font-style: italic; line-height: 2.2; color: var(--subtle-slate); font-weight: 600; }
 
-/* Minimized name font sizing specifically for Slide 3 */
 .royal-name { 
   font-family: 'Alex Brush', cursive; 
   font-size: clamp(2.8rem, 8.5vw, 4.8rem); 
@@ -216,9 +202,6 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
   background: var(--gold-deep); color: #fff; box-shadow: 0 5px 15px rgba(120,91,26,0.35);
 }
 
-/* ═══════════════════════════════
-   LOVE BIRDS CIRCLING ANIMATION (SLIDE 6)
-═══════════════════════════════ */
 .love-birds-container {
   position: relative;
   width: 220px;
@@ -249,12 +232,8 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
   transform-origin: center;
 }
 
-.bird-left {
-  animation: loveAndKissLeft 6s infinite ease-in-out;
-}
-.bird-right {
-  animation: loveAndKissRight 6s infinite ease-in-out;
-}
+.bird-left { animation: loveAndKissLeft 6s infinite ease-in-out; }
+.bird-right { animation: loveAndKissRight 6s infinite ease-in-out; }
 
 .love-heart {
   position: absolute;
@@ -264,78 +243,37 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
 }
 
 @keyframes heartPulseSync {
-  0%, 30%, 70%, 100% {
-    transform: scale(1);
-    text-shadow: 0 0 5px rgba(239, 68, 68, 0.2);
-  }
-  43% {
-    transform: scale(1.4);
-    text-shadow: 0 0 15px rgba(239, 68, 68, 0.8);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  57% {
-    transform: scale(1.55);
-    text-shadow: 0 0 20px rgba(239, 68, 68, 0.9);
-  }
+  0%, 30%, 70%, 100% { transform: scale(1); text-shadow: 0 0 5px rgba(239, 68, 68, 0.2); }
+  43% { transform: scale(1.4); text-shadow: 0 0 15px rgba(239, 68, 68, 0.8); }
+  50% { transform: scale(1.2); }
+  57% { transform: scale(1.55); text-shadow: 0 0 20px rgba(239, 68, 68, 0.9); }
 }
 
 @keyframes loveAndKissLeft {
-  0%, 100% {
-    transform: translateX(-55px) translateY(0px) rotate(0deg);
-  }
-  20% {
-    transform: translateX(-55px) translateY(-4px) rotate(-2deg);
-  }
-  42% {
-    transform: translateX(-18px) translateY(-2px) rotate(10deg);
-  }
-  50% {
-    transform: translateX(-16px) translateY(-2px) rotate(12deg);
-  }
-  58% {
-    transform: translateX(-18px) translateY(-2px) rotate(10deg);
-  }
-  80% {
-    transform: translateX(-55px) translateY(-3px) rotate(2deg);
-  }
+  0%, 100% { transform: translateX(-55px) translateY(0px) rotate(0deg); }
+  20% { transform: translateX(-55px) translateY(-4px) rotate(-2deg); }
+  42% { transform: translateX(-18px) translateY(-2px) rotate(10deg); }
+  50% { transform: translateX(-16px) translateY(-2px) rotate(12deg); }
+  58% { transform: translateX(-18px) translateY(-2px) rotate(10deg); }
+  80% { transform: translateX(-55px) translateY(-3px) rotate(2deg); }
 }
 
 @keyframes loveAndKissRight {
-  0%, 100% {
-    transform: scaleX(-1) translateX(-55px) translateY(0px) rotate(0deg);
-  }
-  20% {
-    transform: scaleX(-1) translateX(-55px) translateY(-4px) rotate(-2deg);
-  }
-  42% {
-    transform: scaleX(-1) translateX(-18px) translateY(-2px) rotate(10deg);
-  }
-  50% {
-    transform: scaleX(-1) translateX(-16px) translateY(-2px) rotate(12deg);
-  }
-  58% {
-    transform: scaleX(-1) translateX(-18px) translateY(-2px) rotate(10deg);
-  }
-  80% {
-    transform: scaleX(-1) translateX(-55px) translateY(-3px) rotate(2deg);
-  }
+  0%, 100% { transform: scaleX(-1) translateX(-55px) translateY(0px) rotate(0deg); }
+  20% { transform: scaleX(-1) translateX(-55px) translateY(-4px) rotate(-2deg); }
+  42% { transform: scaleX(-1) translateX(-18px) translateY(-2px) rotate(10deg); }
+  50% { transform: scaleX(-1) translateX(-16px) translateY(-2px) rotate(12deg); }
+  58% { transform: scaleX(-1) translateX(-18px) translateY(-2px) rotate(10deg); }
+  80% { transform: scaleX(-1) translateX(-55px) translateY(-3px) rotate(2deg); }
 }
 
-.bird-wing {
-  transform-origin: 25px 28px;
-  animation: continuousWingFlap 0.16s infinite alternate linear;
-}
+.bird-wing { transform-origin: 25px 28px; animation: continuousWingFlap 0.16s infinite alternate linear; }
 
 @keyframes continuousWingFlap {
   0% { transform: scaleY(0.4) rotate(-12deg); }
   100% { transform: scaleY(1.1) rotate(16deg); }
 }
 
-/* ═══════════════════════════════
-   TIMELINE PROGRESS LINE
-═══════════════════════════════ */
 #progress-timeline {
   position: fixed; top: 0; left: 0; height: 4px;
   background: linear-gradient(to right, var(--gold-deep), var(--gold-royal), var(--velvet-wine), var(--gold-deep));
@@ -359,10 +297,7 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
 
 <div class="video-model-bg"></div>
 <div class="ambient-overlay"></div>
-
-<!-- Custom Star Glint Canvas Particles -->
 <canvas id="particleCanvas"></canvas>
-
 <div id="progress-timeline"></div>
 
 <div id="nav-controller">
@@ -374,22 +309,11 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
   <div class="controller-dot" onclick="manualJump(5)"></div>
 </div>
 
-<!-- ══════════════════════════════════════
-     AUTOMATIC CINEMATIC STAGE STACK
-══════════════════════════════════════ -->
 <div id="scenes">
-
-  <!-- SCENE 0: Holy Prologue -->
   <div class="scene active" id="s0">
     <div class="cross-container">
       <svg width="65" height="90" viewBox="0 0 90 110" fill="none">
-        <defs>
-          <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#dfba6b"/>
-            <stop offset="50%" stop-color="#b38f43"/>
-            <stop offset="100%" stop-color="#785b1a"/>
-          </linearGradient>
-        </defs>
+        <defs><linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#dfba6b"/><stop offset="50%" stop-color="#b38f43"/><stop offset="100%" stop-color="#785b1a"/></linearGradient></defs>
         <rect x="37" y="0" width="16" height="95" rx="2" fill="url(#goldGrad)" />
         <rect x="10" y="26" width="70" height="16" rx="2" fill="url(#goldGrad)" />
         <circle cx="45" cy="34" r="5" fill="#dfba6b" />
@@ -400,7 +324,6 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
     <div class="main-invitation-label gold-text-gradient">Wedding Invitation</div>
   </div>
 
-  <!-- SCENE 1: Announcement (Slide 2) -->
   <div class="scene" id="s1">
     <div class="family-intro" style="margin-bottom: 18px;">Together With Their Families</div>
     <div class="parent-names gold-text-gradient" style="font-size: clamp(0.9rem, 3.8vw, 1.35rem); line-height: 1.6; margin-bottom: 20px;">
@@ -415,7 +338,6 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
     </div>
   </div>
 
-  <!-- SCENE 2: The Royal Spouses (Slide 3) -->
   <div class="scene" id="s2">
     <div style="width: 100%; max-width: 100%; overflow: hidden;">
       <span class="royal-name bride">R. Sindhuja</span>
@@ -428,7 +350,6 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
     </div>
   </div>
 
-  <!-- SCENE 3: Sacred Schedule (Slide 4) -->
   <div class="scene" id="s3">
     <div class="section-headline gold-text-gradient">The Celebration</div>
     <div class="modern-grid">
@@ -451,10 +372,8 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
     </div>
   </div>
 
-  <!-- SCENE 4: Destination Venues (Slide 5) -->
   <div class="scene" id="s4">
     <div class="section-headline gold-text-gradient">Celebration Venues</div>
-    
     <div class="venue-row-card">
       <div class="venue-flex-header">
         <span style="font-size:1.4rem">⛪</span>
@@ -466,7 +385,6 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
       <div class="venue-title-text">St. Anthony's Church</div>
       <div class="venue-address">No. 3, Ramesh Nagar, 1st Street, Thiruneermalai Road, West Tambaram, Chennai – 600 045</div>
     </div>
-
     <div class="venue-row-card reception-card">
       <div class="venue-flex-header">
         <span style="font-size:1.4rem">🥂</span>
@@ -480,18 +398,12 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
     </div>
   </div>
 
-  <!-- SCENE 5: Grand Finale & Countdown (Slide 6) -->
   <div class="scene" id="s5">
-    
-    <!-- Poetic Vector Love Birds Display -->
     <div class="love-birds-container">
       <svg class="love-birds-svg" viewBox="0 0 200 80">
-        <!-- Elegant golden branch base -->
         <path class="love-branch" d="M20,66 Q100,56 180,66" fill="none" />
         <path d="M140,61 Q155,51 160,61" fill="none" stroke="#785b1a" stroke-width="1.5" />
       </svg>
-      
-      <!-- Bride Bird (Velvet Burgundy) loving interaction -->
       <div class="bird bird-left" style="color: var(--velvet-wine);">
         <svg viewBox="0 0 50 50" width="35" height="35">
           <path d="M15,35 L5,38 L8,32 Z" fill="currentColor" />
@@ -502,8 +414,6 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
           <circle cx="33" cy="17" r="1.2" fill="#fff" />
         </svg>
       </div>
-      
-      <!-- Groom Bird (Deep Gold) loving interaction -->
       <div class="bird bird-right" style="color: var(--gold-deep);">
         <svg viewBox="0 0 50 50" width="35" height="35">
           <path d="M15,35 L5,38 L8,32 Z" fill="currentColor" />
@@ -514,32 +424,23 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
           <circle cx="33" cy="17" r="1.2" fill="#fff" />
         </svg>
       </div>
-      
-      <!-- Pulsating central target love heart -->
       <div class="love-heart">❤️</div>
     </div>
-
     <div class="final-date-badge gold-text-gradient">24th June 2026</div>
     <div class="final-clock-text">Wednesday • 4:00 PM onwards</div>
-    
-    <!-- Responsive styled Bride and Groom Names to guarantee standard containment in mobile viewports -->
     <div style="font-family:'Alex Brush', cursive; font-size: clamp(1.75rem, 7.2vw, 3.4rem); line-height:1.2; margin-bottom:12px; white-space: nowrap; width: 100%; text-align: center;">
       <span class="finale-bride">Sindhuja</span> <span style="color:var(--gold-mid); font-size:1.8rem">&amp;</span> <span style="color:var(--gold-deep)">Rex Thomas</span>
     </div>
-
     <div class="master-countdown" id="live-timer">
       <div class="countdown-unit"><span class="countdown-val" id="val-d">00</span><span class="countdown-lbl">Days</span></div>
       <div class="countdown-unit"><span class="countdown-val" id="val-h">00</span><span class="countdown-lbl">Hrs</span></div>
       <div class="countdown-unit"><span class="countdown-val" id="val-m">00</span><span class="countdown-lbl">Mins</span></div>
       <div class="countdown-unit"><span class="countdown-val" id="val-s">00</span><span class="countdown-lbl">Secs</span></div>
     </div>
-
     <div class="line-accent" style="width:220px; opacity:0.35"></div>
     <div style="font-family:'Cinzel', serif; font-size:0.65rem; letter-spacing:0.5em; color:var(--gold-deep); font-weight:800; margin-top:22px; text-transform:uppercase;">With Best Compliments From Friends &amp; Relatives</div>
-    
     <button class="replay-action-btn" onclick="restartVideoModel(event)">↺ Watch Again</button>
   </div>
-
 </div>
 
 <script>
@@ -551,11 +452,11 @@ let currentIdx = 0;
 let sceneStartTime = Date.now();
 const DISPLAY_DURATION = 5000;
 let engineTimer = null;
+let isScrolling = false;
 
 function updateTimelineVisuals() {
   const elapsed = Date.now() - sceneStartTime;
   let progressPercentage = 0;
-
   if (currentIdx === SCENE_NODES.length - 1) {
     progressPercentage = 100;
   } else {
@@ -564,7 +465,6 @@ function updateTimelineVisuals() {
     const interpolationFactor = Math.min(elapsed / DISPLAY_DURATION, 1);
     progressPercentage = currentSegment + (nextSegment - currentSegment) * interpolationFactor;
   }
-
   TIMELINE_BAR.style.width = progressPercentage + '%';
   requestAnimationFrame(updateTimelineVisuals);
 }
@@ -573,27 +473,30 @@ function playSequence(targetIdx) {
   SCENE_NODES[currentIdx].classList.remove('active');
   currentIdx = targetIdx;
   SCENE_NODES[currentIdx].classList.add('active');
-
   DOTS.forEach((dot, index) => dot.classList.toggle('active', index === currentIdx));
   sceneStartTime = Date.now();
-
   if (engineTimer) clearTimeout(engineTimer);
-  
   if (currentIdx < SCENE_NODES.length - 1) {
-    engineTimer = setTimeout(() => {
-      playSequence(currentIdx + 1);
-    }, DISPLAY_DURATION);
+    engineTimer = setTimeout(() => { playSequence(currentIdx + 1); }, DISPLAY_DURATION);
   }
 }
 
-function manualJump(targetIdx) {
-  playSequence(targetIdx);
-}
+function manualJump(targetIdx) { playSequence(targetIdx); }
+function restartVideoModel(event) { if (event) event.stopPropagation(); playSequence(0); }
 
-function restartVideoModel(event) {
-  if (event) event.stopPropagation();
-  playSequence(0);
-}
+// Added Scroll Navigation
+window.addEventListener('wheel', (e) => {
+  if (isScrolling) return;
+  isScrolling = true;
+  if (e.deltaY > 0) {
+    let next = (currentIdx + 1) % SCENE_NODES.length;
+    playSequence(next);
+  } else if (e.deltaY < 0) {
+    let prev = (currentIdx - 1 + SCENE_NODES.length) % SCENE_NODES.length;
+    playSequence(prev);
+  }
+  setTimeout(() => { isScrolling = false; }, 800);
+}, { passive: false });
 
 window.onload = () => {
   playSequence(0);
@@ -607,29 +510,20 @@ window.addEventListener('resize', resizeCanvas);
 
 class DiamondGlint {
   constructor() {
-    this.x = Math.random() * pC.width;
-    this.y = Math.random() * pC.height;
-    this.size = Math.random() * 2 + 1;
-    this.speedY = Math.random() * 0.25 + 0.1;
-    this.speedX = (Math.random() - 0.5) * 0.1;
-    this.opacity = Math.random() * 0.5 + 0.2;
+    this.x = Math.random() * pC.width; this.y = Math.random() * pC.height;
+    this.size = Math.random() * 2 + 1; this.speedY = Math.random() * 0.25 + 0.1;
+    this.speedX = (Math.random() - 0.5) * 0.1; this.opacity = Math.random() * 0.5 + 0.2;
     this.factor = Math.random() > 0.5 ? 0.005 : -0.005;
   }
   update() {
-    this.y += this.speedY;
-    this.x += this.speedX;
-    this.opacity += this.factor;
+    this.y += this.speedY; this.x += this.speedX; this.opacity += this.factor;
     if (this.opacity > 0.85 || this.opacity < 0.15) this.factor = -this.factor;
     if (this.y > pC.height) { this.y = -10; this.x = Math.random() * pC.width; }
   }
   draw() {
-    pCtx.save();
-    pCtx.globalAlpha = this.opacity;
-    pCtx.fillStyle = '#b38f43';
-    pCtx.beginPath();
-    pCtx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    pCtx.fill();
-    pCtx.restore();
+    pCtx.save(); pCtx.globalAlpha = this.opacity; pCtx.fillStyle = '#b38f43';
+    pCtx.beginPath(); pCtx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    pCtx.fill(); pCtx.restore();
   }
 }
 const elementsPool = Array.from({ length: 40 }, () => new DiamondGlint());
@@ -641,21 +535,17 @@ function tickParticles() {
 requestAnimationFrame(tickParticles);
 
 const TARGET_CLOCK = new Date("June 24, 2026 16:00:00").getTime();
-
 function computeCountdown() {
   const presentTime = new Date().getTime();
   const timeDifference = TARGET_CLOCK - presentTime;
-
   if (timeDifference <= 0) {
     document.getElementById('live-timer').innerHTML = `<div style="font-family:'Cinzel', serif; color: var(--gold-deep); font-size: 1.1rem; letter-spacing: 2px; font-weight:700; width:100%;">The Celebration Has Begun</div>`;
     return;
   }
-
   const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
   const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-
   document.getElementById('val-d').textContent = String(days).padStart(2, '0');
   document.getElementById('val-h').textContent = String(hours).padStart(2, '0');
   document.getElementById('val-m').textContent = String(minutes).padStart(2, '0');
