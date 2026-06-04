@@ -14,6 +14,7 @@
   --velvet-wine: #963246;
   --charcoal-royal: #1c2421;
   --subtle-slate: #3a4742;
+  /* Crystal clear luxury ivory glass for peak legibility */
   --glass-premium: rgba(255, 255, 254, 0.72);
   --border-gold-leaf: rgba(179, 143, 67, 0.45);
 }
@@ -29,9 +30,13 @@ html, body {
   background: #fdfaf4;
 }
 
+/* ═══════════════════════════════
+   CINEMATIC BACKDROP
+═══════════════════════════════ */
 .video-model-bg {
   position: fixed;
   inset: 0;
+  /* Magnificent, high-fashion editorial wedding couple background */
   background: url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1920&auto=format&fit=crop') center center / cover no-repeat;
   z-index: 0;
   transform: scale(1.01);
@@ -54,6 +59,9 @@ html, body {
 canvas { position: fixed; inset: 0; pointer-events: none; }
 #particleCanvas { z-index: 2; }
 
+/* ═══════════════════════════════
+   HIGH-FASHION EDITORIAL SCENES
+═══════════════════════════════ */
 #scenes { position: fixed; inset: 0; z-index: 3; display: flex; align-items: center; justify-content: center; }
 
 .scene {
@@ -73,6 +81,7 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
   opacity: 1; pointer-events: auto; transform: scale(1) translateY(0);
 }
 
+/* Double Layer Luxury Floating Border */
 .scene::before {
   content: ''; position: absolute; inset: 12px;
   border: 1px dashed var(--gold-mid); pointer-events: none; opacity: 0.45;
@@ -82,13 +91,26 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
   border: 1px solid var(--gold-royal); pointer-events: none; opacity: 0.25;
 }
 
+/* Responsive adjustment for extra compact mobile screens to prevent layout overflow */
+@media(max-width: 480px) {
+  .scene {
+    padding: 30px 18px;
+    width: 92%;
+    min-height: 410px;
+  }
+  .scene::before { inset: 8px; }
+  .scene::after { inset: 4px; }
+}
+
+/* ═══════════════════════════════
+   PREMIUM TYPOGRAPHY ARCHITECTURE
+═══════════════════════════════ */
 .gold-text-gradient {
   background: linear-gradient(135deg, var(--gold-deep) 0%, var(--gold-mid) 40%, var(--gold-royal) 70%, var(--gold-deep) 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 1px 1px rgba(255,255,255,0.8));
 }
 
-/* Decent classic Roman Serif J styling */
 .majestic-j {
   font-family: 'Cinzel', serif;
   font-weight: 800;
@@ -120,6 +142,7 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
 .parent-names { font-family: 'Cinzel Decorative', serif; font-size: clamp(1.15rem, 3vw, 1.55rem); font-weight: 700; color: var(--charcoal-royal); margin-bottom: 22px; letter-spacing: 0.04em; }
 .invite-prose { font-size: clamp(1.1rem, 2vw, 1.3rem); font-style: italic; line-height: 2.2; color: var(--subtle-slate); font-weight: 600; }
 
+/* Minimized name font sizing specifically for Slide 3 */
 .royal-name { 
   font-family: 'Alex Brush', cursive; 
   font-size: clamp(2.8rem, 8.5vw, 4.8rem); 
@@ -226,7 +249,6 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
   transform-origin: center;
 }
 
-/* Symmetrical Hover & Kiss flight sequence */
 .bird-left {
   animation: loveAndKissLeft 6s infinite ease-in-out;
 }
@@ -241,7 +263,6 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
   z-index: 6;
 }
 
-/* Pulsates wildly in sync with kissing touch */
 @keyframes heartPulseSync {
   0%, 30%, 70%, 100% {
     transform: scale(1);
@@ -260,7 +281,6 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
   }
 }
 
-/* Symmetrical flight coordinates so birds fly & kiss lovingly */
 @keyframes loveAndKissLeft {
   0%, 100% {
     transform: translateX(-55px) translateY(0px) rotate(0deg);
@@ -303,7 +323,6 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
   }
 }
 
-/* High fidelity wing flapping */
 .bird-wing {
   transform-origin: 25px 28px;
   animation: continuousWingFlap 0.16s infinite alternate linear;
@@ -383,14 +402,16 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
 
   <!-- SCENE 1: Announcement (Slide 2) -->
   <div class="scene" id="s1">
-    <div class="family-intro">Together With Their Families</div>
-    <!-- Decent classic Serif 'J' -->
-    <div class="parent-names gold-text-gradient">Mr. <span class="majestic-j">J</span>. Rajan &amp; Mrs. R. <span class="majestic-j">J</span>ayamalini</div>
+    <div class="family-intro" style="margin-bottom: 18px;">Together With Their Families</div>
+    <div class="parent-names gold-text-gradient" style="font-size: clamp(0.95rem, 2.8vw, 1.35rem); line-height: 1.6; margin-bottom: 20px;">
+      Mr. <span class="majestic-j">J</span>. Rajan &amp; Mrs. R. <span class="majestic-j">J</span>ayamalini <br>
+      <span style="font-family: 'Cinzel', serif; font-size: 0.75rem; letter-spacing: 0.25em; color: var(--gold-mid); display: block; margin: 4px 0; text-transform: uppercase; font-weight: 800;">and</span>
+      Mr. F. Xavier &amp; Mrs. X. Flora
+    </div>
     <div class="invite-prose">
-      Cordially invite you to grace the solemn <br>
-      <span style="color: var(--gold-deep); font-weight:800; font-family:'Cinzel', serif; font-size:0.95rem; letter-spacing:1px;">Nuptial Mass</span> and the majestic <br>
-      <span style="color: var(--gold-deep); font-weight:800; font-family:'Cinzel', serif; font-size:0.95rem; letter-spacing:1px;">Wedding Ceremony</span> <br>
-      of their beloved cherished daughter
+      Cordially invite you to the <br>
+      <span style="color: var(--gold-deep); font-weight:800; font-family:'Cinzel', serif; font-size:0.95rem; letter-spacing:1px; text-transform: uppercase;">Nuptial Mass</span> and the <br>
+      <span style="color: var(--gold-deep); font-weight:800; font-family:'Cinzel', serif; font-size:0.95rem; letter-spacing:1px; text-transform: uppercase;">Wedding Ceremony</span>
     </div>
   </div>
 
@@ -501,7 +522,8 @@ canvas { position: fixed; inset: 0; pointer-events: none; }
     <div class="final-date-badge gold-text-gradient">24th June 2026</div>
     <div class="final-clock-text">Wednesday • 4:00 PM onwards</div>
     
-    <div style="font-family:'Alex Brush', cursive; font-size: 3.4rem; line-height:1.2; margin-bottom:12px; white-space: nowrap;">
+    <!-- Responsive styled Bride and Groom Names to guarantee standard containment in mobile viewports -->
+    <div style="font-family:'Alex Brush', cursive; font-size: clamp(1.75rem, 7.2vw, 3.4rem); line-height:1.2; margin-bottom:12px; white-space: nowrap; width: 100%; text-align: center;">
       <span class="finale-bride">Sindhuja</span> <span style="color:var(--gold-mid); font-size:1.8rem">&amp;</span> <span style="color:var(--gold-deep)">Rex Thomas</span>
     </div>
 
